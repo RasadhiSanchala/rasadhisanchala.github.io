@@ -1,0 +1,13 @@
+JourneyLK portfolio update
+
+Only javaScript/project.js is changed.
+
+What was added:
+- JourneyLK PWA project card under Web Development
+- GitHub link
+- Live Demo link: https://journeylk.vercel.app/
+
+All existing portfolio projects, HTML, CSS, images, and other JavaScript files remain unchanged.
+
+To apply:
+Replace the existing javaScript/project.js file with the one in this package.

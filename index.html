@@ -4,723 +4,3401 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Rasadhi Sanchala - Portfolio</title>
+
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* =========================================================
+           RESEARCH SECTION
+           ========================================================= */
+
+        #research {
+            background: linear-gradient(180deg, #111827 0%, #0d0d0d 100%);
+            padding: 80px 60px 100px;
+            position: relative;
+        }
+
+        #research h2 {
+            text-align: center;
+            color: #ffffff;
+            font-size: 2.6em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            margin-bottom: 10px;
+        }
+
+        #research h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #8b5cf6, #f59e0b);
+            border-radius: 2px;
+            margin: 12px auto 0;
+        }
+
+        .research-wrapper {
+            max-width: 1100px;
+            margin: 42px auto 0;
+        }
+
+        .research-card {
+            background: rgba(255, 255, 255, 0.035);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 34px;
+            box-shadow: 0 16px 45px rgba(0, 0, 0, 0.28);
+        }
+
+        .research-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 7px 14px;
+
+            border-radius: 999px;
+
+            background: rgba(139, 92, 246, 0.12);
+
+            border: 1px solid rgba(139, 92, 246, 0.28);
+
+            color: #c4b5fd;
+
+            font-size: 0.78rem;
+            font-weight: 700;
+
+            letter-spacing: 0.08em;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .research-status::before {
+            content: "";
+
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #22c55e;
+
+            box-shadow: 0 0 12px rgba(34, 197, 94, 0.75);
+        }
+
+        .research-title {
+            color: #f9fafb;
+
+            font-size: 1.65rem;
+
+            line-height: 1.35;
+
+            margin: 0 0 12px;
+        }
+
+        .research-meta {
+            color: #a78bfa;
+
+            font-size: 0.95rem;
+
+            font-weight: 600;
+
+            margin-bottom: 22px;
+        }
+
+        .research-description {
+            color: #cbd5e1;
+
+            line-height: 1.8;
+
+            font-size: 0.96rem;
+
+            margin-bottom: 26px;
+        }
+
+        .research-subheading {
+            color: #ffffff;
+
+            font-size: 1rem;
+
+            font-weight: 700;
+
+            letter-spacing: 0.03em;
+
+            margin: 0 0 14px;
+        }
+
+        .research-flow {
+            display: grid;
+
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+
+            gap: 10px;
+
+            margin-bottom: 28px;
+        }
+
+        .research-flow-step {
+            position: relative;
+
+            min-height: 92px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 14px 12px;
+
+            border-radius: 12px;
+
+            background: rgba(139, 92, 246, 0.08);
+
+            border: 1px solid rgba(139, 92, 246, 0.20);
+
+            color: #e5e7eb;
+
+            font-size: 0.82rem;
+
+            font-weight: 600;
+
+            line-height: 1.45;
+        }
+
+        .research-flow-step:not(:last-child)::after {
+            content: "→";
+
+            position: absolute;
+
+            right: -10px;
+
+            top: 50%;
+
+            transform: translate(50%, -50%);
+
+            color: #f59e0b;
+
+            font-size: 1rem;
+
+            z-index: 2;
+        }
+
+        .research-tech-stack {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 28px;
+        }
+
+        .research-tech-stack span {
+            background: rgba(139, 92, 246, 0.1);
+
+            color: #a78bfa;
+
+            border: 1px solid rgba(139, 92, 246, 0.25);
+
+            border-radius: 20px;
+
+            padding: 6px 13px;
+
+            font-size: 0.78rem;
+
+            font-weight: 600;
+        }
+
+        .research-actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .research-actions a {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            text-decoration: none;
+
+            color: #ffffff;
+
+            font-size: 0.86rem;
+
+            font-weight: 700;
+
+            padding: 10px 18px;
+
+            border-radius: 9px;
+
+            border: 1px solid rgba(255, 255, 255, 0.15);
+
+            background: rgba(255, 255, 255, 0.05);
+
+            transition: 0.25s ease;
+        }
+
+        .research-actions a:hover {
+            color: #f59e0b;
+
+            border-color: rgba(245, 158, 11, 0.45);
+
+            background: rgba(245, 158, 11, 0.08);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* ======================
+           RESPONSIVE RESEARCH
+           ====================== */
+
+        @media (max-width: 900px) {
+
+            #research {
+                padding: 70px 28px 85px;
+            }
+
+            .research-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .research-flow-step {
+                min-height: auto;
+            }
+
+            .research-flow-step:not(:last-child)::after {
+                content: "↓";
+
+                right: 50%;
+
+                top: auto;
+
+                bottom: -16px;
+
+                transform: translate(50%, 50%);
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            #research {
+                padding: 55px 16px 70px;
+            }
+
+            #research h2 {
+                font-size: 2em;
+            }
+
+            .research-card {
+                padding: 24px 20px;
+            }
+
+            .research-title {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+
 </head>
+
 
 <body>
 
-    <!-- This is a my header section -->
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
     <header>
+
         <div class="logo">
+
             <img src="images/logo.png" alt="logo">
+
         </div>
+
 
         <div class="hamburger" id="hamburger">
+
             <i class="fa-solid fa-bars"></i>
+
         </div>
 
+
         <nav id="nav-menu">
+
             <ul>
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#education">EDUCATION</a></li>
-                <li><a href="#experience">EXPERIENCE</a></li>
-                <li><a href="#skills">SKILLS</a></li>
-                <li><a href="#projects">PROJECTS</a></li>
-                <li><a href="#contact-section">CONTACT</a></li>
+
+                <li>
+                    <a href="#home">HOME</a>
+                </li>
+
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+
+                <li>
+                    <a href="#education">EDUCATION</a>
+                </li>
+
+                <li>
+                    <a href="#experience">EXPERIENCE</a>
+                </li>
+
+                <li>
+                    <a href="#skills">SKILLS</a>
+                </li>
+
+                <li>
+                    <a href="#projects">PROJECTS</a>
+                </li>
+
+                <!-- NEW RESEARCH NAVIGATION -->
+                <li>
+                    <a href="#research">RESEARCH</a>
+                </li>
+
+                <li>
+                    <a href="#contact-section">CONTACT</a>
+                </li>
+
             </ul>
+
         </nav>
+
     </header>
+
+
     <hr class="header-line">
 
 
-    <!-- This is my home section -->
+
+    <!-- =========================================================
+         HOME
+         ========================================================= -->
+
     <section id="home">
+
+
         <div class="profile-pic">
+
             <div class="border-animation"></div>
-            <img src="images/my_head_photo-removebg.png" alt="Rasadhi Sanchala">
+
+            <img
+                src="images/my_head_photo-removebg.png"
+                alt="Rasadhi Sanchala"
+            >
+
         </div>
+
+
         <div class="intro">
-            <h2>Hello, It's Me</h2>
-            <h1>Rasadhi Sanchala</h1>
-            <h4>And I'm a <span id="typed-text"></span><span class="typed-cursor">|</span></h4>
-            <p>With experience in both front-end and back-end technologies. I enjoy building creative and functional web
-                applications that deliver great user experiences.</p>
+
+
+            <h2>
+                Hello, It's Me
+            </h2>
+
+
+            <h1>
+                Rasadhi Sanchala
+            </h1>
+
+
+            <h4>
+
+                And I'm a
+
+                <span id="typed-text"></span>
+
+                <span class="typed-cursor">|</span>
+
+            </h4>
+
+
+            <p>
+
+                With experience in both front-end and back-end technologies.
+
+                I enjoy building creative and functional web applications
+
+                that deliver great user experiences.
+
+            </p>
+
+
             <div class="social-icons">
-                <a href="https://www.linkedin.com/in/sanchala-o-p-r/"><img src="images/linkedin icon.png"
-                        alt="LinkedIn"></a>
-                <a href="sanchala1017@gmail.com"><img src="images/email (1).png" alt="Email"></a>
-                <a href="https://github.com/RasadhiSanchala"><img src="images/github.png" alt="GitHub"></a>
-                <a href="https://medium.com/@rasadhi1017"><img src="images/medium.png" alt="Medium"></a>
-            </div>
-            <div class="buttons">
-                <a href="#contact-section"><button>CONTACT ME</button></a>
-                <a href="https://drive.google.com/uc?export=download&id=1fjv6AauWuo-cTJ3E5B96q6aE7p1ludGT"
-                    target="_blank">
-                    <button>DOWNLOAD CV</button>
+
+
+                <a href="https://www.linkedin.com/in/sanchala-o-p-r/">
+
+                    <img
+                        src="images/linkedin icon.png"
+                        alt="LinkedIn"
+                    >
+
                 </a>
 
+
+                <a href="sanchala1017@gmail.com">
+
+                    <img
+                        src="images/email (1).png"
+                        alt="Email"
+                    >
+
+                </a>
+
+
+                <a href="https://github.com/RasadhiSanchala">
+
+                    <img
+                        src="images/github.png"
+                        alt="GitHub"
+                    >
+
+                </a>
+
+
+                <a href="https://medium.com/@rasadhi1017">
+
+                    <img
+                        src="images/medium.png"
+                        alt="Medium"
+                    >
+
+                </a>
+
+
             </div>
+
+
+
+            <div class="buttons">
+
+
+                <a href="#contact-section">
+
+                    <button>
+                        CONTACT ME
+                    </button>
+
+                </a>
+
+
+                <a
+                    href="https://drive.google.com/uc?export=download&id=1ztKmplGbRAEW1NYuHV4Po6ka6sCz3iEI"
+                    target="_blank"
+                >
+
+                    <button>
+                        DOWNLOAD CV
+                    </button>
+
+                </a>
+
+
+            </div>
+
+
         </div>
+
+
     </section>
 
 
-    <!-- This is my about section -->
+
+    <!-- =========================================================
+         ABOUT ME
+         ========================================================= -->
+
     <section id="about">
-        <h2>ABOUT ME</h2>
+
+
+        <h2>
+            ABOUT ME
+        </h2>
+
+
         <div class="about-full-content">
+
+
             <div class="about-content">
+
+
                 <div class="para-set">
-<p>Hello! I'm Rasadhi, a Software Engineering undergraduate at the University of Kelaniya with a strong interest in developing reliable, scalable, and user-centered software systems. I am passionate about understanding the complete Software Development Life Cycle (SDLC), from requirements analysis and system design to implementation, testing, deployment, and maintenance. I focus on structured problem-solving, clear documentation, and applying core engineering principles to build sustainable and efficient solutions.</p>
-<p>I am particularly interested in system architecture, modular design, and writing clean, maintainable code. I value quality assurance practices such as testing and validation, as well as collaboration and iterative development in modern engineering environments. My goal is to grow as a well-rounded software engineer capable of contributing effectively across all stages of software development.</p>
+
+
+                    <p>
+
+                        Hello! I'm Rasadhi, a Software Engineering undergraduate
+                        at the University of Kelaniya with a strong interest in
+                        developing reliable, scalable, and user-centered software
+                        systems. I am passionate about understanding the complete
+                        Software Development Life Cycle (SDLC), from requirements
+                        analysis and system design to implementation, testing,
+                        deployment, and maintenance. I focus on structured
+                        problem-solving, clear documentation, and applying core
+                        engineering principles to build sustainable and efficient
+                        solutions.
+
+                    </p>
+
+
+                    <p>
+
+                        I am particularly interested in system architecture,
+                        modular design, and writing clean, maintainable code.
+                        I value quality assurance practices such as testing and
+                        validation, as well as collaboration and iterative
+                        development in modern engineering environments. My goal
+                        is to grow as a well-rounded software engineer capable
+                        of contributing effectively across all stages of software
+                        development.
+
+                    </p>
+
+
                 </div>
+
+
             </div>
 
+
         </div>
+
+
     </section>
 
-    <!-- Education Section -->
+
+
+    <!-- =========================================================
+         EDUCATION
+         ========================================================= -->
+
     <section id="education">
-        <h2>EDUCATION</h2>
+
+
+        <h2>
+            EDUCATION
+        </h2>
+
+
         <div class="edu-exp-section">
-            <div class="edu-exp-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+
+
+            <div
+                class="edu-exp-grid"
+                style="
+                    grid-template-columns: 1fr;
+                    max-width: 800px;
+                    margin: 0 auto;
+                "
+            >
+
+
                 <div class="edu-column">
-                    <div class="timeline-card">
-                        <div class="timeline-header">
-                            <span class="timeline-date">Jul 2023 – Present</span>
-                            <h4>B.Sc. (Hons.) Software Engineering</h4>
-                            <h5>University of Kelaniya, Sri Lanka</h5>
-                        </div>
-                        <div class="timeline-body">
-                            <p><strong>Current GPA:</strong> 3.65/4.00</p>
-                            <p><strong>Domains:</strong> Advanced Web Applications, Mobile Computing Applications, Data Science & Engineering Applications</p>
-                        </div>
-                    </div>
+
 
                     <div class="timeline-card">
+
+
                         <div class="timeline-header">
-                            <span class="timeline-date">2012 – 2020</span>
-                            <h4>GCE A/L (Physical Science Stream)</h4>
-                            <h5>President College, Matara</h5>
+
+
+                            <span class="timeline-date">
+
+                                Jul 2023 – Present
+
+                            </span>
+
+
+                            <h4>
+
+                                B.Sc. (Hons.) Software Engineering
+
+                            </h4>
+
+
+                            <h5>
+
+                                University of Kelaniya, Sri Lanka
+
+                            </h5>
+
+
                         </div>
+
+
                         <div class="timeline-body">
-                            <p><strong>Z-Score:</strong> 1.59</p>
-                            <p><strong>Combined Maths:</strong> B &nbsp;|&nbsp; <strong>Physics:</strong> A &nbsp;|&nbsp; <strong>Chemistry:</strong> B</p>
+
+
+                            <p>
+
+                                <strong>
+                                    Current GPA:
+                                </strong>
+
+                                3.65/4.00
+
+                            </p>
+
+
+                            <p>
+
+                                <strong>
+                                    Domains:
+                                </strong>
+
+                                Advanced Web Applications,
+                                Mobile Computing Applications,
+                                Data Science & Engineering Applications
+
+                            </p>
+
+
                         </div>
+
+
                     </div>
+
+
+
+                    <div class="timeline-card">
+
+
+                        <div class="timeline-header">
+
+
+                            <span class="timeline-date">
+
+                                2012 – 2020
+
+                            </span>
+
+
+                            <h4>
+
+                                GCE A/L (Physical Science Stream)
+
+                            </h4>
+
+
+                            <h5>
+
+                                President College, Matara
+
+                            </h5>
+
+
+                        </div>
+
+
+                        <div class="timeline-body">
+
+
+                            <p>
+
+                                <strong>
+                                    Z-Score:
+                                </strong>
+
+                                1.59
+
+                            </p>
+
+
+                            <p>
+
+                                <strong>
+                                    Combined Maths:
+                                </strong>
+
+                                B
+
+                                &nbsp;|&nbsp;
+
+                                <strong>
+                                    Physics:
+                                </strong>
+
+                                A
+
+                                &nbsp;|&nbsp;
+
+                                <strong>
+                                    Chemistry:
+                                </strong>
+
+                                B
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
                 </div>
+
+
             </div>
+
+
         </div>
+
+
     </section>
 
-    <!-- Experience Section -->
+
+
+
+    <!-- =========================================================
+         EXPERIENCE
+         ========================================================= -->
+
     <section id="experience">
-        <h2>EXPERIENCE</h2>
+
+
+        <h2>
+            EXPERIENCE
+        </h2>
+
+
         <div class="edu-exp-section">
-            <div class="edu-exp-grid" style="grid-template-columns: 1fr; max-width: 800px; margin: 0 auto;">
+
+
+            <div
+                class="edu-exp-grid"
+                style="
+                    grid-template-columns: 1fr;
+                    max-width: 800px;
+                    margin: 0 auto;
+                "
+            >
+
+
                 <div class="exp-column">
+
+
                     <div class="timeline-card">
+
+
                         <div class="timeline-header">
-                            <span class="timeline-date">Aug 2025 – Feb 2026</span>
-                            <h4>Software Engineering Intern</h4>
-                            <h5>Atlato (Pty) Ltd</h5>
+
+
+                            <span class="timeline-date">
+
+                                Aug 2025 – Feb 2026
+
+                            </span>
+
+
+                            <h4>
+
+                                Software Engineering Intern
+
+                            </h4>
+
+
+                            <h5>
+
+                                Atlato (Pty) Ltd
+
+                            </h5>
+
+
                         </div>
+
+
                         <div class="timeline-body">
-                            <p><strong>Duration:</strong> 6 months</p>
-                            <p><strong>Tech Stack:</strong> Angular, Node.js, Express.js, MySQL</p>
+
+
+                            <p>
+
+                                <strong>
+                                    Duration:
+                                </strong>
+
+                                6 months
+
+                            </p>
+
+
+                            <p>
+
+                                <strong>
+                                    Tech Stack:
+                                </strong>
+
+                                Angular,
+                                Node.js,
+                                Express.js,
+                                MySQL
+
+                            </p>
+
+
 
                             <div class="timeline-links-grid">
-                                <a href="https://atlato.com/" target="_blank" class="timeline-link-item">
-                                    <div class="link-icon"><i class="fa-solid fa-globe"></i></div>
-                                    <div class="link-text">
-                                        <span>Company Website</span>
-                                        <strong>atlato.com</strong>
+
+
+                                <a
+                                    href="https://atlato.com/"
+                                    target="_blank"
+                                    class="timeline-link-item"
+                                >
+
+
+                                    <div class="link-icon">
+
+                                        <i class="fa-solid fa-globe"></i>
+
                                     </div>
-                                    <i class="fa-solid fa-arrow-up-right-from-square arrow"></i>
-                                </a>
-                                <a href="https://drive.google.com/file/d/1OfeeRlUR5qPmJ01MGLbvaNlPlZnBJW7A/view?usp=drive_link" target="_blank" class="timeline-link-item highlight">
-                                    <div class="link-icon"><i class="fa-solid fa-file-contract"></i></div>
+
+
                                     <div class="link-text">
-                                        <span>Internship Document</span>
-                                        <strong>View Service Letter</strong>
+
+                                        <span>
+
+                                            Company Website
+
+                                        </span>
+
+                                        <strong>
+
+                                            atlato.com
+
+                                        </strong>
+
                                     </div>
-                                    <i class="fa-solid fa-arrow-right arrow"></i>
+
+
+                                    <i
+                                        class="
+                                            fa-solid
+                                            fa-arrow-up-right-from-square
+                                            arrow
+                                        "
+                                    ></i>
+
+
                                 </a>
+
+
+
+                                <a
+                                    href="https://drive.google.com/file/d/1OfeeRlUR5qPmJ01MGLbvaNlPlZnBJW7A/view?usp=drive_link"
+                                    target="_blank"
+                                    class="timeline-link-item highlight"
+                                >
+
+
+                                    <div class="link-icon">
+
+                                        <i
+                                            class="
+                                                fa-solid
+                                                fa-file-contract
+                                            "
+                                        ></i>
+
+                                    </div>
+
+
+                                    <div class="link-text">
+
+                                        <span>
+
+                                            Internship Document
+
+                                        </span>
+
+                                        <strong>
+
+                                            View Service Letter
+
+                                        </strong>
+
+                                    </div>
+
+
+                                    <i
+                                        class="
+                                            fa-solid
+                                            fa-arrow-right
+                                            arrow
+                                        "
+                                    ></i>
+
+
+                                </a>
+
+
                             </div>
 
+
+
                             <ul class="timeline-list">
-                                <li>Worked across the software development lifecycle: requirement gathering, SRS documentation, ERD-based database design, UI development, frontend–backend integration, and testing.</li>
-                                <li>Contributed to enterprise systems including TuneUp, Matrix, Crew, focusing mainly on UI modules and workflow-driven features.</li>
-                                <li>Built dashboards and interfaces, including grid and live dashboards, and implemented key modules such as inspection workflows, service task flows, part transactions, alerts, and crew leave template management.</li>
+
+
+                                <li>
+
+                                    Worked across the software development
+                                    lifecycle: requirement gathering,
+                                    SRS documentation, ERD-based database
+                                    design, UI development,
+                                    frontend–backend integration,
+                                    and testing.
+
+                                </li>
+
+
+                                <li>
+
+                                    Contributed to enterprise systems
+                                    including TuneUp, Matrix, Crew,
+                                    focusing mainly on UI modules
+                                    and workflow-driven features.
+
+                                </li>
+
+
+                                <li>
+
+                                    Built dashboards and interfaces,
+                                    including grid and live dashboards,
+                                    and implemented key modules such as
+                                    inspection workflows, service task
+                                    flows, part transactions, alerts,
+                                    and crew leave template management.
+
+                                </li>
+
+
                             </ul>
+
+
                         </div>
+
+
                     </div>
+
+
                 </div>
+
+
             </div>
+
+
         </div>
+
+
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" style="background: linear-gradient(180deg, #111827 0%, #0d0d0d 100%);">
-        <!-- Skills Section -->
+
+
+
+    <!-- =========================================================
+         SKILLS
+         ========================================================= -->
+
+    <section
+        id="skills"
+        style="
+            background:
+                linear-gradient(
+                    180deg,
+                    #111827 0%,
+                    #0d0d0d 100%
+                );
+        "
+    >
+
+
         <div class="skills-section">
-            <h2>My Skills</h2>
+
+
+            <h2>
+                My Skills
+            </h2>
+
 
             <div class="skills-grid">
 
+
+
+                <!-- Frontend -->
+
                 <div class="skill-card">
+
+
                     <div class="skill-card-top">
-                        <span class="skill-num">01</span>
-                        <h3>Front-End Development</h3>
+
+
+                        <span class="skill-num">
+                            01
+                        </span>
+
+
+                        <h3>
+                            Front-End Development
+                        </h3>
+
+
                     </div>
+
+
                     <div class="skill-chips">
-                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
-                        <span>TypeScript</span><span>Angular</span><span>Next.js</span>
-                        <span>React</span><span>Bootstrap</span><span>Tailwind CSS</span>
+
+
+                        <span>HTML</span>
+
+                        <span>CSS</span>
+
+                        <span>JavaScript</span>
+
+                        <span>TypeScript</span>
+
+                        <span>Angular</span>
+
+                        <span>Next.js</span>
+
+                        <span>React</span>
+
+                        <span>Bootstrap</span>
+
+                        <span>Tailwind CSS</span>
+
                         <span>Ant Design</span>
+
+
                     </div>
+
+
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-card-top">
-                        <span class="skill-num">02</span>
-                        <h3>Back-End Development</h3>
-                    </div>
-                    <div class="skill-chips">
-                        <span>Node.js</span><span>Express.js</span>
-                        <span>Java</span><span>PHP</span><span>Nest.js</span>
-                    </div>
-                </div>
+
+
+                <!-- Backend -->
 
                 <div class="skill-card">
+
+
                     <div class="skill-card-top">
-                        <span class="skill-num">03</span>
-                        <h3>Database</h3>
+
+
+                        <span class="skill-num">
+                            02
+                        </span>
+
+
+                        <h3>
+                            Back-End Development
+                        </h3>
+
+
                     </div>
+
+
                     <div class="skill-chips">
-                        <span>MySQL</span><span>MongoDB</span><span>PostgreSQL</span>
+
+
+                        <span>Node.js</span>
+
+                        <span>Express.js</span>
+
+                        <span>Java</span>
+
+                        <span>PHP</span>
+
+                        <span>Nest.js</span>
+
+
                     </div>
+
+
                 </div>
 
+
+
+                <!-- Database -->
+
                 <div class="skill-card">
+
+
                     <div class="skill-card-top">
-                        <span class="skill-num">04</span>
-                        <h3>Version Control</h3>
+
+
+                        <span class="skill-num">
+                            03
+                        </span>
+
+
+                        <h3>
+                            Database
+                        </h3>
+
+
                     </div>
+
+
                     <div class="skill-chips">
-                        <span>Git</span><span>GitHub</span><span>Bitbucket</span>
+
+
+                        <span>MySQL</span>
+
+                        <span>MongoDB</span>
+
+                        <span>PostgreSQL</span>
+
+
                     </div>
+
+
                 </div>
+
+
+
+                <!-- Version Control -->
+
+                <div class="skill-card">
+
+
+                    <div class="skill-card-top">
+
+
+                        <span class="skill-num">
+                            04
+                        </span>
+
+
+                        <h3>
+                            Version Control
+                        </h3>
+
+
+                    </div>
+
+
+                    <div class="skill-chips">
+
+
+                        <span>Git</span>
+
+                        <span>GitHub</span>
+
+                        <span>Bitbucket</span>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- Tools -->
 
                 <div class="skill-card skill-card--wide">
+
+
                     <div class="skill-card-top">
-                        <span class="skill-num">05</span>
-                        <h3>Tools &amp; Technologies</h3>
+
+
+                        <span class="skill-num">
+                            05
+                        </span>
+
+
+                        <h3>
+                            Tools &amp; Technologies
+                        </h3>
+
+
                     </div>
+
+
                     <div class="skill-chips">
-                        <span>VS Code</span><span>IntelliJ IDEA</span><span>WebStorm</span>
-                        <span>Postman</span><span>API Dog</span><span>Android Studio</span>
+
+
+                        <span>VS Code</span>
+
+                        <span>IntelliJ IDEA</span>
+
+                        <span>WebStorm</span>
+
+                        <span>Postman</span>
+
+                        <span>API Dog</span>
+
+                        <span>Android Studio</span>
+
                         <span>Figma</span>
+
+
                     </div>
+
+
                 </div>
 
+
             </div>
+
+
         </div>
 
-        <!-- Scrolling Tech Marquee -->
+
+
+        <!-- TECHNOLOGY MARQUEE -->
+
         <div class="tech-marquee-wrap">
+
+
             <div class="tech-marquee">
-                <span>HTML</span><span>·</span><span>CSS</span><span>·</span>
-                <span>JavaScript</span><span>·</span><span>TypeScript</span><span>·</span>
-                <span>React</span><span>·</span><span>Angular</span><span>·</span>
-                <span>Next.js</span><span>·</span><span>Tailwind</span><span>·</span>
-                <span>Node.js</span><span>·</span><span>Express.js</span><span>·</span>
-                <span>Java</span><span>·</span><span>PHP</span><span>·</span>
-                <span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span>
-                <span>PostgreSQL</span><span>·</span><span>Git</span><span>·</span>
-                <span>GitHub</span><span>·</span><span>Figma</span><span>·</span>
-                <span>Postman</span><span>·</span><span>VS Code</span><span>·</span>
+
+
+                <span>HTML</span>
+                <span>·</span>
+
+                <span>CSS</span>
+                <span>·</span>
+
+                <span>JavaScript</span>
+                <span>·</span>
+
+                <span>TypeScript</span>
+                <span>·</span>
+
+                <span>React</span>
+                <span>·</span>
+
+                <span>Angular</span>
+                <span>·</span>
+
+                <span>Next.js</span>
+                <span>·</span>
+
+                <span>Tailwind</span>
+                <span>·</span>
+
+                <span>Node.js</span>
+                <span>·</span>
+
+                <span>Express.js</span>
+                <span>·</span>
+
+                <span>Java</span>
+                <span>·</span>
+
+                <span>PHP</span>
+                <span>·</span>
+
+                <span>MySQL</span>
+                <span>·</span>
+
+                <span>MongoDB</span>
+                <span>·</span>
+
+                <span>PostgreSQL</span>
+                <span>·</span>
+
+                <span>Git</span>
+                <span>·</span>
+
+                <span>GitHub</span>
+                <span>·</span>
+
+                <span>Figma</span>
+                <span>·</span>
+
+                <span>Postman</span>
+                <span>·</span>
+
+                <span>VS Code</span>
+                <span>·</span>
+
+
+
                 <!-- Duplicate for seamless loop -->
-                <span>HTML</span><span>·</span><span>CSS</span><span>·</span>
-                <span>JavaScript</span><span>·</span><span>TypeScript</span><span>·</span>
-                <span>React</span><span>·</span><span>Angular</span><span>·</span>
-                <span>Next.js</span><span>·</span><span>Tailwind</span><span>·</span>
-                <span>Node.js</span><span>·</span><span>Express.js</span><span>·</span>
-                <span>Java</span><span>·</span><span>PHP</span><span>·</span>
-                <span>MySQL</span><span>·</span><span>MongoDB</span><span>·</span>
-                <span>PostgreSQL</span><span>·</span><span>Git</span><span>·</span>
-                <span>GitHub</span><span>·</span><span>Figma</span><span>·</span>
-                <span>Postman</span><span>·</span><span>VS Code</span><span>·</span>
+
+
+                <span>HTML</span>
+                <span>·</span>
+
+                <span>CSS</span>
+                <span>·</span>
+
+                <span>JavaScript</span>
+                <span>·</span>
+
+                <span>TypeScript</span>
+                <span>·</span>
+
+                <span>React</span>
+                <span>·</span>
+
+                <span>Angular</span>
+                <span>·</span>
+
+                <span>Next.js</span>
+                <span>·</span>
+
+                <span>Tailwind</span>
+                <span>·</span>
+
+                <span>Node.js</span>
+                <span>·</span>
+
+                <span>Express.js</span>
+                <span>·</span>
+
+                <span>Java</span>
+                <span>·</span>
+
+                <span>PHP</span>
+                <span>·</span>
+
+                <span>MySQL</span>
+                <span>·</span>
+
+                <span>MongoDB</span>
+                <span>·</span>
+
+                <span>PostgreSQL</span>
+                <span>·</span>
+
+                <span>Git</span>
+                <span>·</span>
+
+                <span>GitHub</span>
+                <span>·</span>
+
+                <span>Figma</span>
+                <span>·</span>
+
+                <span>Postman</span>
+                <span>·</span>
+
+                <span>VS Code</span>
+                <span>·</span>
+
+
             </div>
+
+
         </div>
+
 
     </section>
 
 
 
 
+    <!-- =========================================================
+         PROJECTS
+         ========================================================= -->
 
-
-    <!-- This is my project section -->
     <section id="projects">
-        <h2>PROJECTS</h2>
+
+
+        <h2>
+            PROJECTS
+        </h2>
+
+
 
         <div class="project-filter-nav">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web Development</button>
-            <button class="filter-btn" data-filter="mobile">Mobile App Development</button>
-            <button class="filter-btn" data-filter="uiux">UI/UX Design</button>
-            <button class="filter-btn" data-filter="other">Other</button>
+
+
+            <button
+                class="filter-btn active"
+                data-filter="all"
+            >
+                All
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="web"
+            >
+                Web Development
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="mobile"
+            >
+                Mobile App Development
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="uiux"
+            >
+                UI/UX Design
+            </button>
+
+
+            <button
+                class="filter-btn"
+                data-filter="other"
+            >
+                Other
+            </button>
+
+
         </div>
+
+
+
 
         <div class="project-grid">
-             <div class="project-card filter-item web">
+
+
+
+            <!-- =================================================
+                 FOREVER HOTEL
+                 ================================================= -->
+
+            <div class="project-card filter-item web">
+
+
                 <div class="project-top">
-                    <img src="images/BakeHouse.jpeg" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/forever-hotel.png"
+                        alt="Forever Hotel Management System"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>BakeHouse</h3>
+
+                        <h3>
+                            Forever Hotel
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>E-Commerce Platform</h3>
+
+
+                    <h3>
+                        Integrated Hotel Management System
+                    </h3>
+
+
                     <p>
-                        A modern e-commerce platform offering a product catalog, secure Google & Auth0 login, 
-                        and JWT session management, built with a scalable full-stack architecture.
+
+                        An ongoing microservices-based hotel management
+                        platform designed to manage end-to-end hotel
+                        operations through multiple integrated subsystems,
+                        including the Hotel Website, Manager Dashboard,
+                        Front Desk System, Guest App,
+                        Kitchen Management System,
+                        and Worker Management System.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
+                        <span>Next.js</span>
+
+                        <span>NestJS</span>
+
+                        <span>Node.js</span>
+
+                        <span>PostgreSQL</span>
+
+                        <span>Redis</span>
+
+                        <span>Docker</span>
+
+                        <span>React Native</span>
+
+                        <span>Microservices</span>
+
+
+                    </div>
+
+
+
+                    <a
+                        href="https://github.com/forever-hotel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+            <!-- =================================================
+                 BAKEHOUSE
+                 ================================================= -->
+
+            <div class="project-card filter-item web">
+
+
+                <div class="project-top">
+
+
+                    <img
+                        src="images/BakeHouse.jpeg"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
+                    <div class="overlay">
+
+                        <h3>
+                            BakeHouse
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-bottom">
+
+
+                    <h3>
+                        E-Commerce Platform
+                    </h3>
+
+
+                    <p>
+
+                        A modern e-commerce platform offering a product
+                        catalog, secure Google & Auth0 login,
+                        and JWT session management, built with a scalable
+                        full-stack architecture.
+
+                    </p>
+
+
+
+                    <div class="tech-stack">
+
+
                         <span>Angular</span>
+
                         <span>Node.js</span>
+
                         <span>Express.js</span>
+
                         <span>JWT</span>
+
                         <span>MongoDB</span>
+
                         <span>Auth0</span>
+
                         <span>Google Login</span>
+
                         <span>Tailwind CSS</span>
 
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Secure-Ecommerce-App" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Secure-Ecommerce-App"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
+
+
+
+
+            <!-- =================================================
+                 PASS MY FUEL WEB
+                 ================================================= -->
+
             <div class="project-card filter-item web">
+
+
                 <div class="project-top">
-                    <img src="images/pro1.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/pro1.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>PassMyFuel</h3>
+
+                        <h3>
+                            PassMyFuel
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Fuel Quota Management System</h3>
+
+
+                    <h3>
+                        Fuel Quota Management System
+                    </h3>
+
+
                     <p>
-                        A full-stack fuel quota management system where users can register, log in, generate QR codes,
-                        and request fuel. Admins can manage stations, monitor distribution, track usage history, handle
-                        user complaints, and analyze fuel consumption patterns
+
+                        A full-stack fuel quota management system where
+                        users can register, log in, generate QR codes,
+                        and request fuel. Admins can manage stations,
+                        monitor distribution, track usage history,
+                        handle user complaints, and analyze fuel
+                        consumption patterns.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>Java</span>
+
                         <span>Spring Boot</span>
+
                         <span>React</span>
+
                         <span>Bootstrap</span>
+
                         <span>MySQL</span>
+
+
                     </div>
 
-                    <a href="https://github.com/pubudu2003060/SENG-22212-Group-Project" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/pubudu2003060/SENG-22212-Group-Project"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
-             <div class="project-card filter-item web">
-                <div class="project-top">
-                    <img src="images/Budget Buddy.jpeg" alt="Project" class="project-img">
-                    <div class="overlay">
-                        <h3>Budget Buddy</h3>
-                    </div>
-                </div>
-                <div class="project-bottom">
-                    <h3>Income Expense Tracker</h3>
-                    <p>
-                        A personal expense tracking web app that allows users to manage income securely, 
-                        view a real-time financial dashboard, upload profile images, and download records as Excel reports.
-                    </p>
 
-                    <div class="tech-stack">
-                        <span>MongoDB</span>
-                        <span>Express.js</span>
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>Tailwind CSS</span>
-                    </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Budget-Buddy" target="_blank">GitHub</a>
-                </div>
-            </div>
+
+            <!-- =================================================
+                 BUDGET BUDDY
+                 ================================================= -->
 
             <div class="project-card filter-item web">
+
+
                 <div class="project-top">
-                    <img src="images/pro2.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/Budget Buddy.jpeg"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>Luxeaura</h3>
+
+                        <h3>
+                            Budget Buddy
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>E-Commerce Platform</h3>
+
+
+                    <h3>
+                        Income Expense Tracker
+                    </h3>
+
+
                     <p>
-                        A comprehensive e-commerce platform with dedicated portals for customers to browse products,
-                        make purchases, and track orders; for admins to manage inventory and oversee operations; and for
-                        suppliers to handle products and view sales efficiently.
+
+                        A personal expense tracking web app that allows
+                        users to manage income securely, view a real-time
+                        financial dashboard, upload profile images,
+                        and download records as Excel reports.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
+                        <span>MongoDB</span>
+
+                        <span>Express.js</span>
+
+                        <span>React</span>
+
+                        <span>Node.js</span>
+
+                        <span>Tailwind CSS</span>
+
+
+                    </div>
+
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Budget-Buddy"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- =================================================
+                 JOURNEYLK
+                 ================================================= -->
+
+            <div
+                class="project-card filter-item web"
+                data-project="journeylk"
+            >
+
+
+                <div class="project-top">
+
+
+                    <img
+                        src="https://raw.githubusercontent.com/RasadhiSanchala/journeylk-progressive-web-app/main/public/icons/icon-512.png"
+                        alt="JourneyLK Progressive Web App"
+                        class="project-img"
+                        style="
+                            object-fit: contain;
+                            padding: 28px;
+                            background: #0f4db8;
+                            box-sizing: border-box;
+                        "
+                    >
+
+
+                    <div class="overlay">
+
+                        <h3>
+                            JourneyLK
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-bottom">
+
+
+                    <h3>
+                        Progressive Web Travel Guide
+                    </h3>
+
+
+                    <p>
+
+                        A responsive Progressive Web App for discovering
+                        Sri Lankan attractions, filtering destinations,
+                        saving favorites, calculating real-time distances
+                        with the Geolocation API, and opening directions
+                        in Google Maps. It also supports app installation
+                        and offline access.
+
+                    </p>
+
+
+
+                    <div class="tech-stack">
+
+
+                        <span>Next.js</span>
+
+                        <span>React</span>
+
+                        <span>TypeScript</span>
+
+                        <span>Tailwind CSS</span>
+
+                        <span>PWA</span>
+
+                        <span>Geolocation API</span>
+
+                        <span>LocalStorage</span>
+
+
+                    </div>
+
+
+
+                    <div
+                        style="
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 8px;
+                        "
+                    >
+
+
+                        <a
+                            href="https://github.com/RasadhiSanchala/journeylk-progressive-web-app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            GitHub
+
+                        </a>
+
+
+
+                        <a
+                            href="https://journeylk.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+
+                            Live Demo
+
+                        </a>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- =================================================
+                 LUXEAURA
+                 ================================================= -->
+
+            <div class="project-card filter-item web">
+
+
+                <div class="project-top">
+
+
+                    <img
+                        src="images/pro2.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
+                    <div class="overlay">
+
+                        <h3>
+                            Luxeaura
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="project-bottom">
+
+
+                    <h3>
+                        E-Commerce Platform
+                    </h3>
+
+
+                    <p>
+
+                        A comprehensive e-commerce platform with dedicated
+                        portals for customers to browse products,
+                        make purchases, and track orders; for admins to
+                        manage inventory and oversee operations; and for
+                        suppliers to handle products and view sales
+                        efficiently.
+
+                    </p>
+
+
+
+                    <div class="tech-stack">
+
+
                         <span>HTML</span>
+
                         <span>CSS</span>
+
                         <span>JavaScript</span>
+
                         <span>PHP</span>
+
                         <span>MySQL</span>
+
 
                     </div>
 
-                    <a href="https://lnkd.in/dqSHdN5k" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://lnkd.in/dqSHdN5k"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
+
+
+            <!-- =================================================
+                 MYTASKO MOBILE APP
+                 ================================================= -->
+
             <div class="project-card filter-item mobile">
+
+
                 <div class="project-top">
-                    <img src="images/TaskManager.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/TaskManager.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>MyTasko</h3>
+
+                        <h3>
+                            MyTasko
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Task Manager App</h3>
+
+
+                    <h3>
+                        Task Manager App
+                    </h3>
+
+
                     <p>
-                        A mobile application that allows users to add, delete, edit, and update tasks,
-                        and view them across different screens for better task management.
-                        It also supports task filtering, deadline tracking, and simple progress monitoring features.
+
+                        A mobile application that allows users to add,
+                        delete, edit, and update tasks, and view them
+                        across different screens for better task
+                        management. It also supports task filtering,
+                        deadline tracking, and simple progress
+                        monitoring features.
+
                     </p>
 
 
+
                     <div class="tech-stack">
+
+
                         <span>React Native</span>
+
                         <span>TypeScript</span>
+
                         <span>Cli</span>
+
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Task-Manager-App" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Task-Manager-App"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
 
+
+            <!-- =================================================
+                 PASS MY FUEL MOBILE
+                 ================================================= -->
+
             <div class="project-card filter-item mobile">
+
+
                 <div class="project-top">
-                    <img src="images/passmyfuel.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/passmyfuel.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>PassMyFuel</h3>
+
+                        <h3>
+                            PassMyFuel
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>QR Code Generator App</h3>
+
+
+                    <h3>
+                        QR Code Generator App
+                    </h3>
+
+
                     <p>
-                        A mobile application for fuel stations and owners to register, scan customers' QR codes,
-                        and view available fuel quota and eligible refill dates.
-                        Enhances efficiency in monitoring fuel distribution and ensuring quota validity.
+
+                        A mobile application for fuel stations and
+                        owners to register, scan customers' QR codes,
+                        and view available fuel quota and eligible
+                        refill dates. Enhances efficiency in monitoring
+                        fuel distribution and ensuring quota validity.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>Flutter</span>
+
                         <span>Dart</span>
+
                         <span>MySQL</span>
+
+
                     </div>
 
-                    <a href="https://github.com/pubudu2003060/SENG-22212-Group-Project" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/pubudu2003060/SENG-22212-Group-Project"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
+
+
+
+
+            <!-- =================================================
+                 HABIT DONE
+                 ================================================= -->
 
             <div class="project-card filter-item mobile">
+
+
                 <div class="project-top">
-                    <img src="images/HabitDone.jpeg" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/HabitDone.jpeg"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>HabitDone</h3>
+
+                        <h3>
+                            HabitDone
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Habit Tracking App</h3>
+
+
+                    <h3>
+                        Habit Tracking App
+                    </h3>
+
+
                     <p>
-                        A mobile habit tracking app designed to help users build positive routines. Features local registration, 
-                        habit completion tracking, filtering options, and daily progress visualization.
+
+                        A mobile habit tracking app designed to help
+                        users build positive routines. Features local
+                        registration, habit completion tracking,
+                        filtering options, and daily progress
+                        visualization.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>React Native</span>
+
                         <span>TypeScript</span>
+
                         <span>AsyncStorage</span>
+
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/HabbitTracker" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/HabbitTracker"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
+
+
+            <!-- =================================================
+                 KIDDO UI/UX
+                 ================================================= -->
+
             <div class="project-card filter-item uiux">
+
+
                 <div class="project-top">
-                    <img src="images/kiddo.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/kiddo.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>KIDDO</h3>
+
+                        <h3>
+                            KIDDO
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Children Learning App</h3>
+
+
+                    <h3>
+                        Children Learning App
+                    </h3>
+
+
                     <p>
-                        A vibrant and interactive mobile UI/UX design for a childrenâ€™s learning app,
-                        aimed at enhancing engagement and making education playful through colorful interfaces
-                        and intuitive navigation suited for kids.
+
+                        A vibrant and interactive mobile UI/UX design
+                        for a children's learning app, aimed at
+                        enhancing engagement and making education
+                        playful through colorful interfaces and
+                        intuitive navigation suited for kids.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>Figma</span>
+
                         <span>UI Design</span>
+
                         <span>Prototyping</span>
+
+
                     </div>
 
-                    <a href="https://www.figma.com/design/g8UKuPun4RmB4bpJben7tP/interactive-application-development?node-id=101-188&t=EyKvVIbk2mtT5h9A-1"
-                        target="_blank">Figma</a>
+
+
+                    <a
+                        href="https://www.figma.com/design/g8UKuPun4RmB4bpJben7tP/interactive-application-development?node-id=101-188&t=EyKvVIbk2mtT5h9A-1"
+                        target="_blank"
+                    >
+
+                        Figma
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
 
+
+            <!-- =================================================
+                 PORTFOLIO UI/UX
+                 ================================================= -->
+
             <div class="project-card filter-item uiux">
+
+
                 <div class="project-top">
-                    <img src="images/portfolio.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/portfolio.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>Portfolio</h3>
+
+                        <h3>
+                            Portfolio
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Personal Portfolio Design</h3>
+
+
+                    <h3>
+                        Personal Portfolio Design
+                    </h3>
+
+
                     <p>
-                        A clean and modern portfolio UI/UX design created to showcase projects, skills,
-                        and experience with smooth navigation and user-friendly layouts, tailored for professional
-                        presentation.
+
+                        A clean and modern portfolio UI/UX design
+                        created to showcase projects, skills, and
+                        experience with smooth navigation and
+                        user-friendly layouts, tailored for
+                        professional presentation.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>Figma</span>
+
                         <span>UI Design</span>
+
                         <span>Prototyping</span>
+
+
                     </div>
 
-                    <a href="https://www.figma.com/design/3ziZfeIBfhOPKG9Z9UmOLr/portfolio?node-id=0-1&t=6aw6JxRUBZhh97h3-1"
-                        target="_blank">Figma</a>
+
+
+                    <a
+                        href="https://www.figma.com/design/3ziZfeIBfhOPKG9Z9UmOLr/portfolio?node-id=0-1&t=6aw6JxRUBZhh97h3-1"
+                        target="_blank"
+                    >
+
+                        Figma
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
+
+
+            <!-- =================================================
+                 MYTASKO UI/UX
+                 ================================================= -->
+
             <div class="project-card filter-item uiux">
+
+
                 <div class="project-top">
-                    <img src="images/TaskManager.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/TaskManager.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>MyTasko</h3>
+
+                        <h3>
+                            MyTasko
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Task Manager App Design</h3>
+
+
+                    <h3>
+                        Task Manager App Design
+                    </h3>
+
+
                     <p>
-                        A mobile UI/UX design for a task management app that helps users add, update, and manage their
-                        tasks efficiently with intuitive navigation and multiple screen layouts for better productivity.
-                        Includes user-friendly components, clean layout, and responsive interaction flow for usability.
+
+                        A mobile UI/UX design for a task management app
+                        that helps users add, update, and manage their
+                        tasks efficiently with intuitive navigation
+                        and multiple screen layouts for better
+                        productivity. Includes user-friendly
+                        components, clean layout, and responsive
+                        interaction flow for usability.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>Figma</span>
+
                         <span>UI Design</span>
+
                         <span>User Flow</span>
+
                         <span>Prototyping</span>
+
+
                     </div>
 
-                    <a href="https://www.figma.com/design/kAsgSdWrAHEBa6UphlJ97k/Mobile-To-Do-App---SE-2021-021?node-id=0-1&t=bEr5no4PmqkgmsgQ-1"
-                        target="_blank">Figma</a>
+
+
+                    <a
+                        href="https://www.figma.com/design/kAsgSdWrAHEBa6UphlJ97k/Mobile-To-Do-App---SE-2021-021?node-id=0-1&t=bEr5no4PmqkgmsgQ-1"
+                        target="_blank"
+                    >
+
+                        Figma
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
 
+
+            <!-- =================================================
+                 CALCULATOR
+                 ================================================= -->
 
             <div class="project-card filter-item other">
+
+
                 <div class="project-top">
-                    <img src="images/calculator.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/calculator.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>Calculator</h3>
+
+                        <h3>
+                            Calculator
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Calculator App</h3>
+
+
+                    <h3>
+                        Calculator App
+                    </h3>
+
+
                     <p>
-                        A simple and functional calculator app built with HTML, CSS, and JavaScript, allowing users to
-                        perform basic arithmetic operations like addition, subtraction, multiplication, and division
-                        with ease. Features a responsive and user-friendly interface.
+
+                        A simple and functional calculator app built
+                        with HTML, CSS, and JavaScript, allowing users
+                        to perform basic arithmetic operations like
+                        addition, subtraction, multiplication, and
+                        division with ease. Features a responsive and
+                        user-friendly interface.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>HTML</span>
+
                         <span>CSS</span>
+
                         <span>JavaScript</span>
+
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Calculator" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Calculator"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
+
+
+            <!-- =================================================
+                 TODO LIST
+                 ================================================= -->
 
             <div class="project-card filter-item other">
+
+
                 <div class="project-top">
-                    <img src="images/todolist.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/todolist.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>To-Do List</h3>
+
+                        <h3>
+                            To-Do List
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>To-Do List App</h3>
+
+
+                    <h3>
+                        To-Do List App
+                    </h3>
+
+
                     <p>
-                        A simple and efficient To-Do List app built using HTML, CSS, and JavaScript, enabling users to
-                        add, edit, and remove tasks. It offers a smooth user experience and helps organize daily tasks
-                        effectively.
+
+                        A simple and efficient To-Do List app built
+                        using HTML, CSS, and JavaScript, enabling users
+                        to add, edit, and remove tasks. It offers a
+                        smooth user experience and helps organize
+                        daily tasks effectively.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>HTML</span>
+
                         <span>CSS</span>
+
                         <span>JavaScript</span>
+
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Todo-List" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Todo-List"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
 
 
+
+
+            <!-- =================================================
+                 ROCK PAPER SCISSOR
+                 ================================================= -->
 
             <div class="project-card filter-item other">
+
+
                 <div class="project-top">
-                    <img src="images/game.png" alt="Project" class="project-img">
+
+
+                    <img
+                        src="images/game.png"
+                        alt="Project"
+                        class="project-img"
+                    >
+
+
                     <div class="overlay">
-                        <h3>Rock-Paper-Scissor</h3>
+
+                        <h3>
+                            Rock-Paper-Scissor
+                        </h3>
+
                     </div>
+
+
                 </div>
+
+
+
                 <div class="project-bottom">
-                    <h3>Rock-Paper-Scissor Game</h3>
+
+
+                    <h3>
+                        Rock-Paper-Scissor Game
+                    </h3>
+
+
                     <p>
-                        A fun interactive Rock-Paper-Scissor game built with HTML, CSS, and JavaScript. Players can
-                        select their move and play against the computer. The game provides instant feedback on the
-                        winner.
+
+                        A fun interactive Rock-Paper-Scissor game
+                        built with HTML, CSS, and JavaScript.
+                        Players can select their move and play against
+                        the computer. The game provides instant
+                        feedback on the winner.
+
                     </p>
 
+
+
                     <div class="tech-stack">
+
+
                         <span>HTML</span>
+
                         <span>CSS</span>
+
                         <span>JavaScript</span>
+
+
                     </div>
 
-                    <a href="https://github.com/RasadhiSanchala/Rock-Paper-Scissor-Game" target="_blank">GitHub</a>
+
+
+                    <a
+                        href="https://github.com/RasadhiSanchala/Rock-Paper-Scissor-Game"
+                        target="_blank"
+                    >
+
+                        GitHub
+
+                    </a>
+
+
                 </div>
+
+
             </div>
-
-
 
 
         </div>
 
 
-
-
-
-
-
-
-        </div>
     </section>
 
-    <!-- This is my contact section -->
+
+
+
+    <!-- =========================================================
+         RESEARCH
+         ========================================================= -->
+
+    <section id="research">
+
+
+        <h2>
+            RESEARCH
+        </h2>
+
+
+        <div class="research-wrapper">
+
+
+            <div class="research-card">
+
+
+                <div class="research-status">
+
+                    Ongoing Group Research
+
+                </div>
+
+
+
+                <h3 class="research-title">
+
+                    Integrating Structural and Textual Semantics for
+                    Ontology-Enriched Knowledge Graph Representation Learning
+
+                </h3>
+
+
+
+                <p class="research-meta">
+
+                    B.Sc. (Hons.) Software Engineering
+                    · University of Kelaniya
+
+                </p>
+
+
+
+                <p class="research-description">
+
+                    Developing a KG–LM–KG representation learning
+                    framework for knowledge graph completion that
+                    combines structural graph information with textual
+                    semantics. The implemented research pipeline
+                    integrates graph-based representation learning,
+                    a frozen language model, graph refinement,
+                    and link prediction to study how structural and
+                    textual knowledge can complement each other.
+
+                </p>
+
+
+
+                <h4 class="research-subheading">
+
+                    Research Pipeline
+
+                </h4>
+
+
+
+                <div class="research-flow">
+
+
+                    <div class="research-flow-step">
+
+                        Knowledge Graph
+
+                    </div>
+
+
+                    <div class="research-flow-step">
+
+                        GNN Encoder
+
+                    </div>
+
+
+                    <div class="research-flow-step">
+
+                        Frozen Language Model
+
+                    </div>
+
+
+                    <div class="research-flow-step">
+
+                        GNN Refinement
+
+                    </div>
+
+
+                    <div class="research-flow-step">
+
+                        Link Prediction
+
+                    </div>
+
+
+                </div>
+
+
+
+                <h4 class="research-subheading">
+
+                    Technologies &amp; Research Areas
+
+                </h4>
+
+
+
+                <div class="research-tech-stack">
+
+
+                    <span>
+                        PyTorch
+                    </span>
+
+
+                    <span>
+                        PyTorch Geometric
+                    </span>
+
+
+                    <span>
+                        RoBERTa
+                    </span>
+
+
+                    <span>
+                        RGAT
+                    </span>
+
+
+                    <span>
+                        ComplEx
+                    </span>
+
+
+                    <span>
+                        Knowledge Graphs
+                    </span>
+
+
+                    <span>
+                        Representation Learning
+                    </span>
+
+
+                    <span>
+                        Link Prediction
+                    </span>
+
+
+                </div>
+
+
+
+                <div class="research-actions">
+
+
+                    <a
+                        href="https://github.com/Rashmika119/Research-project"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="fa-brands fa-github"></i>
+
+                        Research Repository
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+
     <section id="contact-section">
+
+
         <div class="contact-wrapper">
+
+
+
             <div class="contact-left">
-                <p class="get-in-touch-label">GET IN TOUCH</p>
-                <h2 class="contact-heading">Let's Build<br><span>Something<br>Together</span></h2>
-                <p class="contact-tagline">Whether you have an exciting project, a collaboration idea, or just want to chat, my inbox is always open.</p>
+
+
+                <p class="get-in-touch-label">
+
+                    GET IN TOUCH
+
+                </p>
+
+
+
+                <h2 class="contact-heading">
+
+                    Let's Build
+
+                    <br>
+
+                    <span>
+
+                        Something
+
+                        <br>
+
+                        Together
+
+                    </span>
+
+                </h2>
+
+
+
+                <p class="contact-tagline">
+
+                    Whether you have an exciting project,
+                    a collaboration idea,
+                    or just want to chat,
+                    my inbox is always open.
+
+                </p>
+
+
+
                 <div class="contact-cards">
-                    <a href="https://github.com/RasadhiSanchala" target="_blank" class="contact-card">
+
+
+
+                    <!-- GitHub -->
+
+                    <a
+                        href="https://github.com/RasadhiSanchala"
+                        target="_blank"
+                        class="contact-card"
+                    >
+
+
                         <span class="card-icon github-icon">
+
+
                             <i class="fa-brands fa-github"></i>
+
+
                         </span>
+
+
+
                         <div class="card-text">
-                            <span class="card-label">GITHUB</span>
-                            <span class="card-value">github.com/RasadhiSanchala</span>
+
+
+                            <span class="card-label">
+
+                                GITHUB
+
+                            </span>
+
+
+                            <span class="card-value">
+
+                                github.com/RasadhiSanchala
+
+                            </span>
+
+
                         </div>
-                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+
+
+                        <i
+                            class="
+                                fa-solid
+                                fa-arrow-right
+                                arrow
+                            "
+                        ></i>
+
+
                     </a>
-                    <a href="https://www.linkedin.com/in/sanchala-o-p-r/" target="_blank" class="contact-card">
+
+
+
+
+                    <!-- LinkedIn -->
+
+                    <a
+                        href="https://www.linkedin.com/in/sanchala-o-p-r/"
+                        target="_blank"
+                        class="contact-card"
+                    >
+
+
                         <span class="card-icon linkedin-icon">
+
+
                             <i class="fa-brands fa-linkedin-in"></i>
+
+
                         </span>
+
+
+
                         <div class="card-text">
-                            <span class="card-label">LINKEDIN</span>
-                            <span class="card-value">linkedin.com/in/sanchala-o-p-r</span>
+
+
+                            <span class="card-label">
+
+                                LINKEDIN
+
+                            </span>
+
+
+                            <span class="card-value">
+
+                                linkedin.com/in/sanchala-o-p-r
+
+                            </span>
+
+
                         </div>
-                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+
+
+                        <i
+                            class="
+                                fa-solid
+                                fa-arrow-right
+                                arrow
+                            "
+                        ></i>
+
+
                     </a>
-                    <a href="mailto:sanchala1017@gmail.com" class="contact-card">
+
+
+
+
+                    <!-- Email -->
+
+                    <a
+                        href="mailto:sanchala1017@gmail.com"
+                        class="contact-card"
+                    >
+
+
                         <span class="card-icon email-icon">
+
+
                             <i class="fa-regular fa-envelope"></i>
+
+
                         </span>
+
+
+
                         <div class="card-text">
-                            <span class="card-label">EMAIL</span>
-                            <span class="card-value">sanchala1017@gmail.com</span>
+
+
+                            <span class="card-label">
+
+                                EMAIL
+
+                            </span>
+
+
+                            <span class="card-value">
+
+                                sanchala1017@gmail.com
+
+                            </span>
+
+
                         </div>
-                        <i class="fa-solid fa-arrow-right arrow"></i>
+
+
+
+                        <i
+                            class="
+                                fa-solid
+                                fa-arrow-right
+                                arrow
+                            "
+                        ></i>
+
+
                     </a>
+
+
                 </div>
+
+
             </div>
+
+
+
+
+            <!-- CONTACT FORM -->
+
             <div class="contact-right">
-                <h3>Send a Message</h3>
-                <form id="contact-form" onsubmit="sendEmail(event)">
+
+
+                <h3>
+
+                    Send a Message
+
+                </h3>
+
+
+
+                <form
+                    id="contact-form"
+                    onsubmit="sendEmail(event)"
+                >
+
+
+
                     <div class="form-group">
-                        <label for="user_name">Your Name</label>
-                        <input type="text" id="user_name" name="user_name" placeholder="Alex Johnson" required>
+
+
+                        <label for="user_name">
+
+                            Your Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="user_name"
+                            name="user_name"
+                            placeholder="Alex Johnson"
+                            required
+                        >
+
+
                     </div>
+
+
+
+
                     <div class="form-group">
-                        <label for="user_email">Email Address</label>
-                        <input type="email" id="user_email" name="user_email" placeholder="you@example.com" required>
+
+
+                        <label for="user_email">
+
+                            Email Address
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="user_email"
+                            name="user_email"
+                            placeholder="you@example.com"
+                            required
+                        >
+
+
                     </div>
+
+
+
+
                     <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="I'd love to collaborate on..." required></textarea>
+
+
+                        <label for="message">
+
+                            Message
+
+                        </label>
+
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            placeholder="I'd love to collaborate on..."
+                            required
+                        ></textarea>
+
+
                     </div>
-                    <button type="submit" class="send-btn" id="send-btn">
-                        <span id="btn-text"> Send Message</span>
-                        <span id="btn-loader" style="display:none;">Sending...</span>
+
+
+
+
+                    <button
+                        type="submit"
+                        class="send-btn"
+                        id="send-btn"
+                    >
+
+
+                        <span id="btn-text">
+
+                            Send Message
+
+                        </span>
+
+
+                        <span
+                            id="btn-loader"
+                            style="display:none;"
+                        >
+
+                            Sending...
+
+                        </span>
+
+
                     </button>
-                    <p id="form-status" class="form-status"></p>
+
+
+
+                    <p
+                        id="form-status"
+                        class="form-status"
+                    ></p>
+
+
                 </form>
+
+
             </div>
+
+
         </div>
+
+
     </section>
+
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
 
     <footer>
-        <p>© 2025 Rasadhi Sanchala. All rights reserved.</p>
+
+
+        <p>
+
+            © 2025 Rasadhi Sanchala.
+            All rights reserved.
+
+        </p>
+
+
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+
     <script src="javaScript/home.js"></script>
+
     <script src="javaScript/project.js"></script>
+
     <script src="javaScript/contact.js"></script>
+
     <script src="javaScript/typewriter.js"></script>
+
+
 </body>
 
 </html>
